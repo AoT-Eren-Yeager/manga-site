@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    cursor: url(cursors/cursor.png), auto;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to top, black, blue);
+    min-height: 100vh;
+   
+    
+}
+
+.picture {
+    display: grid;
+    grid-template-columns: repeat(5, 250px);
+    gap: 40px 20px;
+    justify-content: center;
+    padding: 20px;
+    align-items: stretch;
+    
+}
+
+
+
+
+.main-header {
+    background-color: white;
+    width: 100%;
+    padding: 15px 30px;
+    overflow: hidden;
+    position: relative;
+    border: solid #333;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-title h1 {
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+    font-size: 28px;
+    transition:  0.5s ease;
+
+}
+
+.header-title p {
+    margin: 5px 0 0;
+    font-size: 15px;
+    color: #666;
+}
+
+.header-title h1:hover, p:hover {
+    padding: 5px 5px;
+    color: aqua;
+    background-color: black;
+    border-radius: 10px;
+
+    transition: 0.5s ease;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.main-nav ul li a:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 15px rgb(174, 0, 255);
+}
+
+.manga-card {
+    background-color: black;
+    padding: 12px 12px 16px;
+    margin: 0px;
+    border-radius: 30px;
+    border: 2px solid rgb(174, 0, 255);
+    box-shadow: 10px 3px 50px rgb(174, 0, 255);
+   
+    width: 100%;
+    align-items: stretch;
+
+    transition: 1.0s ease;
+    display: flex;
+    
+    flex-direction: column;
+    
+    overflow: hidden;
+}
+
+.manga-card img {
+    
+    width: 246px;
+    height: 250px;
+
+   
+    
+    border-radius: 30px;
+    display: block;
+    transition: 1.0s ease;
+    object-fit: cover;
+    object-position: center;
+}
+
+.manga-card:hover {
+    border: 2px solid rgb(5, 205, 250);
+    box-shadow: 10px 3px 50px rgb(5, 205, 250);
+    
+}
+.manga-card h3 {
+    color: white;
+    font-size: 17px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    
+    transition: 0.5s ease;
+    
+}
+
+.manga-card h3:hover {
+    color: aqua;
+    transition: 0.5s ease;
+
+
+}
+
+
+.manga-card a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.search-field{
+    border-color: rgb(5, 205, 250);
+    outline: none;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.search-input input {
+    padding: 0px;
+}
