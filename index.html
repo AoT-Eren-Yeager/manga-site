@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles.css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <title>Manga-site</title>
 </head>
@@ -19,7 +19,7 @@
             </div>
 
             <div class="search-input">
-                <input type="text" class="search-field" placeholder="Search">
+                <input type="search" class="search-field" placeholder="Search" id="q" name="search">
             </div>
         
             <nav class="main-nav">
@@ -36,78 +36,83 @@
     </header>
 
     
+    
         <main class="picture">
+
             <!-- Picture 1 -->
-            <article class="manga-card">
+            <article class="manga-card" data-title="Прирождённый наёмник">
                 <a href="#">
                     <img src="https://shiro.senkuro.net/d8qvcHlEpXxncsh-F73vxrsVTD8JRjV_zBDMH9ktd0g/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS81MzA0MDgxNTEyMjk2NDg5Mi9jb3ZlcnMvZjI2MTg3ODBhNTUzMjZjODc2MGQ3ZTFkN2RjZTg4ZjlkZTY2NDQzZV8yMTUzNDg0MDc2MDA5NTY5MzAuanBlZw.jpeg" alt="Прирождённый наёмник">
                     <h3>Прирождённый наёмник</h3>
                 </a>
             </article>
 
-            <article class="manga-card">
+            <article class="manga-card" data-title="Я стал первородным принцем - отморозком">
                 <a href="#">
                     <img src="https://shiro.senkuro.net/AoJUdce-tPIF404iHP4C7trymg822rThmlE83ho4_mU/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8yMTY3NDE0MzkxODk1NjcwMTUvY292ZXJzLzQwNzAwZDkzYjBlNjVmOGI5YTBjZTYzN2Y4ZmZhOWI0ZGFkYzY2ZTlfMjE2NzQxNTg2MjQxODY1Mjc4LmpwZWc.jpeg" alt="Я стал первородным принцем - отморозком">
                     <h3>Я стал первородным принцем - отморозком</h3>
                 </a>
             </article>
 
-            <article class="manga-card">
+            <article class="manga-card" data-title="Король-рыцарь, вернувшийся с богами">
                 <a href="#">
                     <img src="https://shiro.senkuro.net/wHRy7Hsyvgs5i8C4yLOtv9DNhZ3I_hZih-xsFD_09Go/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS83MzU1MDczMzg5ODcwMzI3Ni9jb3ZlcnMvN2ZjNDBjNjhlM2FhYTQyODRiZTRlMmNiNjNlZTc4MjI5NDM5NDk2Ml8yMTY2MzEyOTkzMzM0NDEwODYuanBlZw.jpeg" alt="Король-рыцарь, вернувшийся с богами">
                     <h3>Король-рыцарь, вернувшийся с богами</h3>
                 </a>
             </article>
 
-            <article class="manga-card">
+            <article class="manga-card" data-title="Постоянное пробуждение">
                 <a href="#">
                     <img src="https://shiro.senkuro.net/0gc7SnVzXvYZ7KZczU0QWP-LUfS3uXDh9lXqbSNnjgM/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xODg5MjYxNTQ0NTM4MjkxNTUvY292ZXJzLzExNTE3MzQyN2E2YWJiOGNiMjM1N2VjMDRiMTdiMzUzZTZmZTM4YjZfMTg4OTI2MjQ0NTY0MjU2Mjg4LmpwZWc.jpeg" alt="Постоянное пробуждение">
                     <h3>Постоянное пробуждение</h3>
                 </a>
             </article>
 
-            <article class="manga-card">
+            <article class="manga-card" data-title="Как выжить в академии">
                 <a href="#">
                     <img src="https://shiro.senkuro.net/6JRB5QP6JbJJl6WDWrgSywxBJveqHpqH4eyuCSDPNm0/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xMDU5NDUwODQzNjA0MTc2OTUvY292ZXJzL2E3ZmQwOTgzNmIxZTU5MTFhNjdiOTU5NDk4ZDkxNmQxYWVmMzllMThfMjE2MzkxOTc5MjQyNjM2ODYyLmpwZWc.jpeg" alt="Как выжить в академии">
                     <h3>Как выжить в академии</h3>
                 </a>
             </article>
 
-            <article class="manga-card">
+            <article class="manga-card" data-title="Младший сын мечника">
                 <a href="#">
                     <img src="https://shiro.senkuro.net/TpejA8D5dK4cR-NXbIZewuRoAuF9IZ0JRS2kd7Q8QN4/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS81Mzc2MjMxOTk4NDkxMDc3OS9jb3ZlcnMvMjc2Yjg1ZjgwZGY2M2RlYTA4ODVhMjNkNjQ0OTI0YmNhZTgzMzRhYl8yMTYzODM1NzM4OTA5NzUyOTQuanBlZw.jpeg" alt="Младший сын мечника">
                     <h3>Младший сын мечника</h3>
                 </a>
             </article>
 
-            <article class="manga-card">
+            <article class="manga-card" data-title="Возвращение гончей железной крови">
                 <a href="#">
                     <img src="https://shiro.senkuro.net/16vQHxLtBMjx1l2ipOGXXvALMbGF3qWmnP524ouWShU/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS82ODUxNTA0ODcyNDY1MjQ2Ny9jb3ZlcnMvZTNjMmY0MTJjMjc3NTFmMmY4MTNhZmMwYTU5NzdjYzM3Y2QxODhlM18xNDMzMTY3MjM1MjM2Njc1MDUuanBlZw.jpeg" alt="Возвращение гончей железной крови">
                     <h3>Возвращение гончей железной крови</h3>
                 </a>
             </article>
 
-            <article class="manga-card">
+            <article class="manga-card" data-title="Убийство игрока">
                 <a href="#">
                     <img src="https://shiro.senkuro.net/Bn2kxf0Hn0zP5GmR9X80RRj32w8hifx-iAD-V7fjGXI/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xMDAwMjk2MTAwMTU2MTMzNDAvY292ZXJzL2Q2MzViNWM4NmQxZjMwOGQ5NDEyMzBmMjI2MTA2ZjEwZjM3ODdiZmNfMjE2NjM3ODA1ODIzMDE4NTU4LmpwZWc.jpeg" alt="Убийство игрока">
                     <h3>Убийство игрока</h3>
                 </a>
             </article>
-
-            <article class="manga-card">
+ 
+            <article class="manga-card" data-title="Рыцарь проживаюший один и тот же день">
                 <a href="#">
                     <img src="https://shiro.senkuro.net/LE0yOPj8zhnijBw73VwH75HN_pdA2O-pagVp8t2qG8A/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xMjU3Nzc1ODk1Njk2MDMwOTIvY292ZXJzLzM0OGIwYTRiMDUyOThiYjBiNWFlZGFmY2UzNGIzMTNmNGQxZjQwN2NfMTQwMjIzNjA0MzQzMTk1MTg1LmpwZWc.jpeg" alt="Рыцарь проживаюший один и тот же день">
                     <h3>Рыцарь проживаюший один и тот же день</h3>
                 </a>
             </article>
 
-            <article class="manga-card">
+            <article class="manga-card" data-title="Незначительный персонаж собственной истории">
                 <a href="#">
                     <img src="https://remanga.org/media/titles/extra-novel_/cover_7d920f14d6f447e6.webp" alt="Незначительный персонаж собственной истории">
                     <h3>Незначительный персонаж собственной истории</h3>
                 </a>
             </article>
+            
         </main>
+        <p class="no-results" id="noResults" hidden>Ничего не найдено 😔</p>
 
+        <script src="script.js" defer></script>
 </body>
 </html>

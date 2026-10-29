@@ -18,7 +18,7 @@ body {
 
 .picture {
     display: grid;
-    grid-template-columns: repeat(5, 250px);
+    grid-template-columns: repeat(5, minmax(0, 250px));
     gap: 40px 20px;
     justify-content: center;
     padding: 20px;
@@ -27,8 +27,18 @@ body {
 }
 
 
+.no-results {
+    grid-column: 1 / -1 ;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-style: italic;
+    padding: 40px 20px;
+    font-size: 20px;
+}
 
-
+.no-results[hidden] {
+    display: none;
+}
 .main-header {
     background-color: white;
     width: 100%;
@@ -116,17 +126,17 @@ body {
 }
 
 .manga-card img {
-    
-    width: 246px;
-    height: 250px;
+    width: 100%;
+    aspect-ratio: 175 / 250;
+    height: auto;
 
-   
-    
-    border-radius: 30px;
     display: block;
-    transition: 1.0s ease;
+    border-radius: 20px;
+
     object-fit: cover;
     object-position: center;
+
+    transition: transform 0.5s ease;
 }
 
 .manga-card:hover {
@@ -172,6 +182,7 @@ body {
     font-style: italic;
     font-weight: 500;
     font-size: 20px;
+    padding: 10px 15px;
 }
 
 .search-input input {
