@@ -59,12 +59,20 @@ body {
     margin: 0 auto;
 }
 
+.header-title {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
 .header-title h1 {
     display: inline;
     padding: 0px;
     margin: 0px;
-    font-size: 28px;
+    font-size: 25px;
     transition:  0.5s ease;
+    padding: 5px 5px;
+    border-radius: 10px;
 
 }
 
@@ -75,7 +83,7 @@ body {
 }
 
 .header-title h1:hover, p:hover {
-    padding: 5px 5px;
+    
     color: aqua;
     background-color: black;
     border-radius: 10px;
@@ -127,22 +135,26 @@ body {
 
 .title-container {
     text-align: center;
-    width: 100%;
+
 }
 
 .page-title {
     display: inline-block;
     position: relative;
-
-    color: white;
-    
-
-    transition: color 0.5s ease;
+    font-size: 25px;
+    color: black;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: color 0.5s ease, background-color 0.3s ease;
 
 }
 
 .page-title:hover {
-    color: aquamarine;
+  
+    background-color: black;
+    border-radius: 10px;
+    
+    color: white;
 }
 
 
@@ -208,4 +220,52 @@ body {
 
 .search-input input {
     padding: 0px;
+}
+
+@media (max-width: 768px){
+    .header-content {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 16px;
+    }
+
+    .header-title {
+        flex: 1 1 auto;
+    }
+
+    .header-title h1 {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .header-title p {
+        font-size: 12px;
+    }
+
+    .search-input {
+        order: 3;
+
+        flex: 1 1 100%;
+        max-width: none;
+    }
+
+    .main-nav {
+        order: 4;
+        flex: 1 1 100%;
+    }
+
+    .main-nav a {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    .picture {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .manga-card h3 {
+        font-size: 14px;
+    }
 }
